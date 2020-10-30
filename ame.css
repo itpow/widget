@@ -1,0 +1,117 @@
+:root {
+  /*--url: url('../base/img/bubbles_duck.png');*/
+  /* --z-: 3000; */
+}
+
+/* IE11 compatibility эталон с бетки */
+html {
+  /*--url: url('../base/img/bubbles_duck.png');*/
+  /*--z-: 3000;*/
+}
+
+/* Оболочка бота */
+.amechatsite { transition: all .5s; width: 352px; font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif; background: #fff; position: fixed; bottom: 20px; right: 20px; z-index: 3000; display: flex; flex-direction: column; align-items: center; border-radius: 5px; overflow: hidden; box-shadow: 0px 0px 5px 0px rgba(50, 50, 50, 0.5); }
+
+/* Шапка бота */
+.amechatsite .amechatsiteHead { width: 90%; height: 30px; margin-top: 10px; display: flex; justify-content: flex-end; align-items: center; background: #fff; }
+
+/* Блок с сообщениями */
+.amechatsite .amechatsiteMsgs { width: 95%; height: 400px; padding: 2% 4%; box-sizing: border-box; background: #fff; display: flex; flex-direction: column; justify-content: start; align-items: center; overflow-y: auto; }
+
+/* Блок с сообщениями */
+.amechatsite .amechatsiteMsgs::-webkit-scrollbar { width: 6px; }
+
+/* Блок с сообщениями */
+.amechatsite .amechatsiteMsgs::-webkit-scrollbar-track-piece { background: #ffffff; }
+
+/* Блок с сообщениями */
+.amechatsite .amechatsiteMsgs::-webkit-scrollbar-thumb { height: 50px; background: #0081EE; border-radius: 3px; }
+
+/* Кнопка в сообщении */
+.amechatsite .amechatsiteMsgs button { outline: none; border-radius: 5px; border: 1px solid #0081EE; background: #fff; color: #0081EE; padding: 10px; cursor: pointer; }
+
+/* Кнопка в сообщении */
+.amechatsite .amechatsiteMsgs button:hover { background: #0081EE; color: #fff; }
+
+/* Позиция по X user */
+.amechatsiteMsgsXSet { width: 100%; display: flex; align-items: center; justify-content: flex-end; }
+
+/* Позиция по X bot */
+.amechatsiteMsgsXGet { width: 100%; display: flex; align-items: center; justify-content: flex-start; }
+
+/* Сообщение bot и user */
+.amechatsite .amechatsiteMsgsGet, .amechatsite .amechatsiteMsgsSet { box-sizing: border-box; border-radius: 5px; position: relative; margin: 5px; word-wrap: break-word; padding: 10px; font-size: 18px; font-weight: 300; }
+
+/* Сообщение bot */
+.amechatsite .amechatsiteMsgsGet { background: #E5E5E5; color: #000; }
+
+/* Сообщение user */
+.amechatsite .amechatsiteMsgsSet { background: #0081EE; color: #fff; }
+
+/* Хвостик bot и user */
+.amechatsite .amechatsiteMsgsGet:after, .amechatsite .amechatsiteMsgsSet:after { content: ''; position: absolute; top: 0; width: 0; height: 0; border: 20px solid transparent; border-top: 0; }
+
+/* Хвостик bot  */
+.amechatsite .amechatsiteMsgsGet:after { left: 0; border-right-color: #E5E5E5; border-left: 0; margin-left: -10px; }
+
+/* Хвостик user  */
+.amechatsite .amechatsiteMsgsSet:after { right: 0; border-left-color: #0081EE; border-right: 0; margin-right: -10px; }
+
+/* Блок ввода сообщения */
+.amechatsite .amechatsiteField { border-radius: 5px; width: 90%; margin: auto; display: flex; justify-content: space-between; align-items: center; background: #fff; margin-bottom: 10px; box-shadow: 0px 0px 5px 0px rgba(50, 50, 50, 0.5); }
+
+/* Поле ввода сообщения */
+.amechatsite .amechatsiteFieldInput { height: auto; border: none; padding-left: 10px; outline: none; width: 80%; font-size: 17px; font-weight: 300; background: #fff; }
+
+/* Кнопка ввода */
+.amechatsite .amechatsiteFieldSend { resize: none; border: none; background-size: 80%; height: 40px; width: 40px; cursor: pointer; background: #fff; border-radius: 50%; margin-right: 7px; background: url(../base/img/send.png) no-repeat center center; }
+
+/* Кнопка ввода */
+.amechatsite .amechatsiteFieldSend:hover { background-color: #eee; }
+
+/* Лого */
+.amechatsite .amechatsiteLogo { background: url(../base/img/logo_ame.png); width: 91px; height: 41px; background-repeat: no-repeat; }
+
+/* Кнопка закрыть */
+.amechatsite .amechatsiteHeadClose { height: 32px; width: 32px; background: url(../base/img/close.png); background-position: center; background-repeat: no-repeat; cursor: pointer; border-radius: 50%; }
+
+/* Кнопка открыть бот background-image: url(../base/img/bubbles_duck.png); background-image: var(--url); */
+.amechatsiteButton { border-radius: 50%; position: fixed; bottom: 20px; right: 20px; z-index: var(--z-index); background-color: #fff; background-image: var(--bubble); background-size: 35px; background-position: center; background-repeat: no-repeat; box-shadow: 0px 0px 5px 1px #57ADF5; height: 65px; width: 65px; transition: all .2s; cursor: pointer; }
+
+/* Кнопка открыть бот */
+.amechatsiteButton:hover { background-size: 40px; }
+
+/* Закрытое состояние кнопки */
+.amechatsite_Close { transform: scale(0); }
+
+/* Закрытое состояние бота */
+.amechatsiteClosed { bottom: -700px!important; height: 0vh!important; }
+
+.amechatsiteFooter { display: flex; align-items: center; justify-content: space-between; width: 90%; margin-bottom: 5px; font-size: 14px; font-weight: 300; }
+
+.amechatsiteFooter a { color: #000; text-decoration: underline; }
+
+.amechatsiteFooter a:hover { color: #64ABE6; text-decoration: underline; }
+
+.amechatsiteFooter div { display: flex; align-items: center; }
+
+.amechatsiteFooter span { display: block; width: 35px; height: 16px; background: url(../base/img/logo_ame.png); background-size: 100%; background-repeat: no-repeat; background-position: center; margin-left: 7px; }
+
+button.btn-chat { border-radius: 50px; -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.08); -moz-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.08); box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2), 0 1px 2px rgba(0, 0, 0, 0.08); color: #fff; display:block; width:fit-content; text-align: center; font-family: Arial, Helvetica, sans-serif; font-size: 14px; padding: 8px 16px; margin: 20px auto; text-decoration: none; text-shadow: 0 1px 1px rgba(0, 0, 0, 0.075); -webkit-transition: background 0.1s linear; -moz-transition: background 0.1s linear; -o-transition: background 0.1s linear; transition: background 0.1s linear; }
+
+button.btn-chat { background: #03a9f3; border: 1px solid #116991; }
+
+button.btn-chat:hover { background: #5dcdff; }
+
+/* Положение на странице */
+.amechatsiteonpage { width: auto!important; height: auto!important; position: unset!important; bottom: 0px!important; right: 0px!important; z-index: auto!important; }
+
+.amechatsiteonpage .amechatsiteButton { position: unset!important; }
+
+/* Мобильные телефоны */
+@media only screen and (max-width: 600px) {
+
+  .amechatsite { box-shadow: none; width: 100%; height: calc(100vh - 60px); bottom: 0; left: 0; z-index: 99999; border-radius: 0px; }
+
+  .amechatsite .amechatsiteMsgs { height: auto; }
+}
